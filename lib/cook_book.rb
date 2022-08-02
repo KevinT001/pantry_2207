@@ -9,3 +9,4 @@ class CookBook
     @recipes << recipe
   end
 end
+
