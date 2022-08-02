@@ -15,4 +15,9 @@ class Recipe
   def ingredient
     @ingredients_required.keys
   end
+
+  def total_calories
+    @ingredients_required.sum #need to multiply calories by total units and add up?  
+    require'pry';binding.pry
+  end
 end

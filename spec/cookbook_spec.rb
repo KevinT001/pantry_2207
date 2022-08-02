@@ -22,15 +22,23 @@ RSpec.describe CookBook do
   end
 
   it 'can add recipes to cookbook array' do 
-   @cookbook.add_recipe(@recipe1)
-   @cookbook.add_recipe(@recipe2)
-   expect(@cookbook.recipes).to eq([@recipe1, @recipe2])
+    @cookbook.add_recipe(@recipe1)
+    @cookbook.add_recipe(@recipe2)
+    expect(@cookbook.recipes).to eq([@recipe1, @recipe2])
   end
 
+  
+
   it'can add recipes and show the ingredients' do 
-    @recipe1.add_ingredient(ingredient1, 2)
-    @recipe1.add_ingredient(ingredient2, 8)
-    recipe2.add_ingredient(ingredient1, 2)
+    @cookbook.add_recipe(@recipe1)
+    @cookbook.add_recipe(@recipe2)
+    @recipe1.add_ingredient(@ingredient1, 2)
+    @recipe1.add_ingredient(@ingredient2, 8)
+    @recipe2.add_ingredient(@ingredient1, 2)
+    @recipe2.add_ingredient(@ingredient3, 4)
+    @recipe2.add_ingredient(@ingredient4, 1)
+
+    expect(@cookbook.ingredients).to eq(["Cheese", "Macoroni", "Ground Beef", "Bun"])
   end
 
 end

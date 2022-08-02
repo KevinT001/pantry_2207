@@ -33,4 +33,16 @@ RSpec.describe Recipe do
     
     expect(@recipe1.recipes).to eq([@ingredient1,@ingredient2])
   end
+
+  it 'can return total calories of a given recipe' do 
+    @recipe1.add_ingredient(@ingredient1, 2)
+    @recipe1.add_ingredient(@ingredient2, 8)
+    @recipe2.add_ingredient(@ingredient1, 2)
+    @recipe2.add_ingredient(@ingredient3, 4)
+    @recipe2.add_ingredient(@ingredient4, 1)
+
+    expect(@recipe1.total_calories).to eq(440)
+    expect(@recipe2.total_calories).to eq(675)
+
+  end
 end
