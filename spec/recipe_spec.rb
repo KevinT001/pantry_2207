@@ -29,6 +29,6 @@ RSpec.describe Recipe do
     @recipe1.add_ingredient(@ingredient1, 4)
     @recipe1.add_ingredient(@ingredient2, 8)
     
-    expect(@recipe1.ingredient).to eq([@ingredient1,@ingredient2])
+    expect(@recipe1.recipes).to eq([@ingredient1,@ingredient2])
   end
 end
