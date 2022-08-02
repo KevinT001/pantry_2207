@@ -1,2 +1,4 @@
 class Pantry
+
+  
 end

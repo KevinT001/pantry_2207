@@ -1,11 +1,11 @@
 class Ingredient
   attr_reader :name,
               :unit,
-              :calorie
+              :calories
   def initialize(info)
     @name = info[:name] 
     @unit = info[:unit]
-    @calorie =info[:calorie]
+    @calories =info[:calories]
 
   end
 
