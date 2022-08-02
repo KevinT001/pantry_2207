@@ -7,7 +7,15 @@ RSpec.describe Pantry do
   end
 
   it 'exists' do 
-    expect(@pantry). to be_a(Pantry)
+    expect(@pantry).to be_a(Pantry)
+  end
+
+  it 'has stock set to empty hash' do 
+    expect(@pantry.stock).to eq({})
+  end
+
+  it 'can check stock' do 
+    expect(@pantry.stock_check(ingredient1).to eq 0)
   end
 
   
